@@ -1,0 +1,1011 @@
+{
+  "RequestProducts": [
+    {
+      "id": 1,
+      "ProductType": "Beverages",
+      "ProductName": "Beer",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "10"
+    },
+    {
+      "id": 2,
+      "ProductType": "Beverages",
+      "ProductName": "Pepsi",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "20"
+    },
+    {
+      "id": 3,
+      "ProductType": "Beverages",
+      "ProductName": "Coke",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "30"
+    },
+    {
+      "id": 4,
+      "ProductType": "Dairy",
+      "ProductName": "Bread",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20"
+    },
+    {
+      "id": 5,
+      "ProductType": "Dairy",
+      "ProductName": "Milk",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25"
+    },
+    {
+      "id": 6,
+      "ProductType": "Dairy",
+      "ProductName": "Panner",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "30"
+    },
+    {
+      "id": 7,
+      "ProductType": "Vegetables",
+      "ProductName": "Potato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20kg"
+    },
+    {
+      "id": 8,
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg"
+    },
+    {
+      "id": 9,
+      "ProductType": "Vegetables",
+      "ProductName": "Onion",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg"
+    },
+    {
+      "id": 11,
+      "ProductType": "Fruits",
+      "ProductName": "Kiwi",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "21kg"
+    },
+    {
+      "id": 12,
+      "ProductType": "Fruits",
+      "ProductName": "Mango",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "30kg"
+    },
+    {
+      "id": 13,
+      "ProductType": "Fruits",
+      "ProductName": "Orange",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg"
+    },
+    {
+      "id": 14,
+      "ProductType": "Foodgrains",
+      "ProductName": "Rice",
+      "VendorId": "SV10159",
+      "VendorName": "Kishore",
+      "SupplierName": "Priya",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "30kg"
+    },
+    {
+      "id": 15,
+      "ProductType": "Foodgrains",
+      "ProductName": "Wheat",
+      "VendorId": "SV10159",
+      "VendorName": "Kishore",
+      "SupplierName": "Priya",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "35kg"
+    },
+    {
+      "id": 16,
+      "ProductType": "Baby Products",
+      "ProductName": "Oil",
+      "VendorId": "SV10125",
+      "VendorName": "Shiny",
+      "SupplierName": "Viji",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "25"
+    },
+    {
+      "id": 16,
+      "ProductType": "Baby Products",
+      "ProductName": "Daiper",
+      "VendorId": "SV10125",
+      "VendorName": "Shiny",
+      "SupplierName": "Viji",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "25"
+    }
+  ],
+  "PerishableProducts": [
+    {
+      "ProductId": "FA10234",
+      "ProductType": "Fruits",
+      "ProductName": "Kiwi",
+      "InDate": "12/3/20",
+      "OutDate": "16/3/20",
+      "VendorId": "SV10287",
+      "ProductQty": "10Kg"
+    },
+    {
+      "ProductId": "FA36897",
+      "ProductType": "Fruits",
+      "ProductName": "Mango",
+      "InDate": "18/3/20",
+      "OutDate": "12/3/20",
+      "VendorId": "SV12345",
+      "ProductQty": "5kg"
+    },
+    {
+      "ProductId": "FA36987",
+      "ProductType": "Fruits",
+      "ProductName": "WaterMelon",
+      "InDate": "16/8/20",
+      "OutDate": "20/4/20",
+      "VendorId": "SV12356",
+      "ProductQty": "15kg"
+    },
+    {
+      "ProductId": "FA36856",
+      "ProductType": "Fruits",
+      "ProductName": "Orange",
+      "InDate": "11/4/20",
+      "OutDate": "15/4/20",
+      "VendorId": "SV12369",
+      "ProductQty": "50kg"
+    },
+    {
+      "ProductId": "VE36897",
+      "ProductType": "Vegetables",
+      "ProductName": "Brocoli",
+      "InDate": "04/4/20",
+      "OutDate": "09/4/20",
+      "VendorId": "SV35321",
+      "ProductQty": "5kg"
+    },
+    {
+      "ProductId": "VE96325",
+      "ProductType": "Vegetables",
+      "ProductName": "Potato",
+      "InDate": "30/3/20",
+      "OutDate": "03/4/20",
+      "VendorId": "SV12856",
+      "ProductQty": "9kg"
+    },
+    {
+      "ProductId": "VE98745",
+      "ProductType": "Vegetables",
+      "ProductName": "Onion ",
+      "InDate": "23/4/20",
+      "OutDate": "27/4/20",
+      "VendorId": "SV129886",
+      "ProductQty": "8kg"
+    },
+    {
+      "ProductId": "VE98785",
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato ",
+      "InDate": "28/4/20",
+      "OutDate": "01/5/20",
+      "VendorId": "SV129856",
+      "ProductQty": "8kg"
+    },
+    {
+      "ProductId": "VE98795",
+      "ProductType": "Vegetables",
+      "ProductName": "Cabbages ",
+      "InDate": "05/5/20",
+      "OutDate": "09/5/20",
+      "VendorId": "SV129898",
+      "ProductQty": "8kg"
+    },
+    {
+      "ProductId": "VE98963",
+      "ProductType": "Vegetables",
+      "ProductName": "Lady Finger ",
+      "InDate": "11/5/20",
+      "OutDate": "15/5/20",
+      "VendorId": "SV129874",
+      "ProductQty": "20kg"
+    },
+    {
+      "ProductId": "FE98778",
+      "ProductType": "Fruits",
+      "ProductName": "MuskMelon ",
+      "InDate": "16/5/20",
+      "OutDate": "20/5/20",
+      "VendorId": "SV129887",
+      "ProductQty": "18kg"
+    },
+    {
+      "ProductId": "VE98745",
+      "ProductType": "Fruits",
+      "ProductName": "Grapes ",
+      "InDate": "21/5/20",
+      "OutDate": "24/5/20",
+      "VendorId": "SV129875",
+      "ProductQty": "28kg"
+    },
+    {
+      "ProductId": "VE987498",
+      "ProductType": "Vegetables",
+      "ProductName": "Carrot ",
+      "InDate": "24/5/20",
+      "OutDate": "230/5/20",
+      "VendorId": "SV129854",
+      "ProductQty": "15kg"
+    },
+    {
+      "ProductId": "VE98752",
+      "ProductType": "Vegetables",
+      "ProductName": "Beans ",
+      "InDate": "03/6/20",
+      "OutDate": "10/6/20",
+      "VendorId": "SV129694",
+      "ProductQty": "2kg"
+    },
+    {
+      "ProductId": "FE98796",
+      "ProductType": "Fruits",
+      "ProductName": "Apple",
+      "InDate": "12/6/20",
+      "OutDate": "20/6/20",
+      "VendorId": "SV129354",
+      "ProductQty": "18kg"
+    }
+  ],
+  "InShopStock": [
+    {
+      "OrderId": "Lan963214",
+      "ProductId": "FA10692",
+      "ProductType": "Fruits",
+      "ProductName": "Orange",
+      "InDate": "09/6/20",
+      "OutDate": "10/6/20",
+      "VendorId": "SV10963",
+      "ProductQty": "30kg"
+    },
+    {
+      "OrderId": "Lan158742",
+      "ProductId": "FG10234",
+      "ProductType": "Foodgrains",
+      "ProductName": "Wheat",
+      "InDate": "30/5/20",
+      "OutDate": "05/6/20",
+      "VendorId": "SV10254",
+      "ProductQty": "30Kg"
+    },
+    {
+      "OrderId": "Lan951234",
+      "ProductId": "DA10234",
+      "ProductType": "Dairy",
+      "ProductName": "Bread",
+      "InDate": "21/5/20",
+      "OutDate": "22/5/20",
+      "VendorId": "SV10285",
+      "ProductQty": "10"
+    },
+    {
+      "OrderId": "Lan753159",
+      "ProductId": "CL10287",
+      "ProductType": "Cleaning",
+      "ProductName": "Handwash",
+      "InDate": "18/5/20",
+      "OutDate": "20/5/20",
+      "VendorId": "SV10225",
+      "ProductQty": "25"
+    },
+    {
+      "OrderId": "Lan456321",
+      "ProductId": "BP10234",
+      "ProductType": "Baby Products",
+      "ProductName": "Diapers",
+      "InDate": "10/5/20",
+      "OutDate": "12/5/20",
+      "VendorId": "SV10963",
+      "ProductQty": "40"
+    },
+    {
+      "OrderId": "Lan956874",
+      "ProductId": "BA10852",
+      "ProductType": "Beverages",
+      "ProductName": "Pepsi",
+      "InDate": "02/5/20",
+      "OutDate": "05/5/20",
+      "VendorId": "SV10254",
+      "ProductQty": "30"
+    },
+    {
+      "OrderId": "Lan123965",
+      "ProductId": "VE10234",
+      "ProductType": "Vegetables",
+      "ProductName": "Patato",
+      "InDate": "26/4/20",
+      "OutDate": "30/4/20",
+      "VendorId": "SV10951",
+      "ProductQty": "20Kg"
+    },
+    {
+      "OrderId": "Lan654789",
+      "ProductId": "FA10258",
+      "ProductType": "Fruits",
+      "ProductName": "Mango",
+      "InDate": "21/4/20",
+      "OutDate": "24/4/20",
+      "VendorId": "SV10578",
+      "ProductQty": "10kg"
+    },
+    {
+      "OrderId": "Lan852147",
+      "ProductId": "FG15987",
+      "ProductType": "FoodGrains",
+      "ProductName": "Rice",
+      "InDate": "15/4/20",
+      "OutDate": "20/4/20",
+      "VendorId": "SV10285",
+      "ProductQty": "25kg"
+    },
+    {
+      "OrderId": "Lan963258",
+      "ProductId": "BP10234",
+      "ProductType": "Baby Products",
+      "ProductName": "Body Oil",
+      "InDate": "09/4/20",
+      "OutDate": "12/4/20",
+      "VendorId": "SV10287",
+      "ProductQty": "35"
+    },
+    {
+      "OrderId": "Lan357894",
+      "ProductId": "CL10234",
+      "ProductType": "Cleaning",
+      "ProductName": "Floor Cleaner",
+      "InDate": "30/3/20",
+      "OutDate": "02/4/20",
+      "VendorId": "SV10212",
+      "ProductQty": "25"
+    },
+    {
+      "OrderId": "Lan951247",
+      "ProductId": "DA10234",
+      "ProductType": "Dairy",
+      "ProductName": "Milk",
+      "InDate": "25/3/20",
+      "OutDate": "30/3/20",
+      "VendorId": "SV10265",
+      "ProductQty": "15"
+    },
+    {
+      "OrderId": "Lan954876",
+      "ProductId": "BA102742",
+      "ProductType": "Beverages",
+      "ProductName": "Coke",
+      "InDate": "21/3/20",
+      "OutDate": "25/3/20",
+      "VendorId": "SV10295",
+      "ProductQty": "20"
+    },
+    {
+      "OrderId": "Lan753357",
+      "ProductId": "VE10234",
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "InDate": "15/3/20",
+      "OutDate": "20/3/20",
+      "VendorId": "SV10298",
+      "ProductQty": "15Kg"
+    },
+    {
+      "OrderId": "Lan321456",
+      "ProductId": "FA10234",
+      "ProductType": "Fruits",
+      "ProductName": "Kiwi",
+      "InDate": "12/3/20",
+      "OutDate": "16/3/20",
+      "VendorId": "SV10287",
+      "ProductQty": "10Kg"
+    }
+  ],
+  "Inwarehousestock": [
+    {
+      "OrderId": "Lan321456",
+      "ProductId": "FA10234",
+      "ProductType": "Fruits",
+      "ProductName": "Kiwi",
+      "InDate": "12/3/20",
+      "OutDate": "16/3/20",
+      "VendorId": "SV10287",
+      "ProductQty": "10Kg"
+    },
+    {
+      "OrderId": "Lan753357",
+      "ProductId": "VE10234",
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "InDate": "15/3/20",
+      "OutDate": "20/3/20",
+      "VendorId": "SV10298",
+      "ProductQty": "15Kg"
+    },
+    {
+      "OrderId": "Lan753357",
+      "ProductId": "VE10234",
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "InDate": "15/3/20",
+      "OutDate": "20/3/20",
+      "VendorId": "SV10298",
+      "ProductQty": "15Kg"
+    },
+    {
+      "OrderId": "Lan954876",
+      "ProductId": "BA102742",
+      "ProductType": "Beverages",
+      "ProductName": "Coke",
+      "InDate": "21/3/20",
+      "OutDate": "25/3/20",
+      "VendorId": "SV10295",
+      "ProductQty": "20"
+    },
+    {
+      "OrderId": "Lan951247",
+      "ProductId": "DA10234",
+      "ProductType": "Dairy",
+      "ProductName": "Milk",
+      "InDate": "25/3/20",
+      "OutDate": "30/3/20",
+      "VendorId": "SV10265",
+      "ProductQty": "15"
+    },
+    {
+      "OrderId": "Lan357894",
+      "ProductId": "CL10234",
+      "ProductType": "Cleaning",
+      "ProductName": "Floor Cleaner",
+      "InDate": "30/3/20",
+      "OutDate": "02/4/20",
+      "VendorId": "SV10212",
+      "ProductQty": "25"
+    },
+    {
+      "OrderId": "Lan963258",
+      "ProductId": "BP10234",
+      "ProductType": "Baby Products",
+      "ProductName": "Body Oil",
+      "InDate": "09/4/20",
+      "OutDate": "12/4/20",
+      "VendorId": "SV10287",
+      "ProductQty": "35"
+    },
+    {
+      "OrderId": "Lan852147",
+      "ProductId": "FG15987",
+      "ProductType": "FoodGrains",
+      "ProductName": "Rice",
+      "InDate": "15/4/20",
+      "OutDate": "20/4/20",
+      "VendorId": "SV10285",
+      "ProductQty": "25kg"
+    },
+    {
+      "OrderId": "Lan654789",
+      "ProductId": "FA10258",
+      "ProductType": "Fruits",
+      "ProductName": "Mango",
+      "InDate": "21/4/20",
+      "OutDate": "24/4/20",
+      "VendorId": "SV10578",
+      "ProductQty": "10kg"
+    },
+    {
+      "OrderId": "Lan123965",
+      "ProductId": "VE10234",
+      "ProductType": "Vegetables",
+      "ProductName": "Patato",
+      "InDate": "26/4/20",
+      "OutDate": "30/4/20",
+      "VendorId": "SV10951",
+      "ProductQty": "20Kg"
+    },
+    {
+      "OrderId": "Lan956874",
+      "ProductId": "BA10852",
+      "ProductType": "Beverages",
+      "ProductName": "Pepsi",
+      "InDate": "02/5/20",
+      "OutDate": "05/5/20",
+      "VendorId": "SV10254",
+      "ProductQty": "30"
+    },
+    {
+      "OrderId": "Lan456321",
+      "ProductId": "BP10234",
+      "ProductType": "Baby Products",
+      "ProductName": "Diapers",
+      "InDate": "10/5/20",
+      "OutDate": "12/5/20",
+      "VendorId": "SV10963",
+      "ProductQty": "40"
+    },
+    {
+      "OrderId": "Lan753159",
+      "ProductId": "CL10287",
+      "ProductType": "Cleaning",
+      "ProductName": "Handwash",
+      "InDate": "18/5/20",
+      "OutDate": "20/5/20",
+      "VendorId": "SV10225",
+      "ProductQty": "25"
+    },
+    {
+      "OrderId": "Lan951234",
+      "ProductId": "DA10234",
+      "ProductType": "Dairy",
+      "ProductName": "Bread",
+      "InDate": "21/5/20",
+      "OutDate": "22/5/20",
+      "VendorId": "SV10285",
+      "ProductQty": "10"
+    },
+    {
+      "OrderId": "Lan963214",
+      "ProductId": "FA10692",
+      "ProductType": "Fruits",
+      "ProductName": "Orange",
+      "InDate": "09/6/20",
+      "OutDate": "10/6/20",
+      "VendorId": "SV10963",
+      "ProductQty": "30kg"
+    },
+    {
+      "OrderId": "Lan158742",
+      "ProductId": "FG10234",
+      "ProductType": "Foodgrains",
+      "ProductName": "Wheat",
+      "InDate": "30/5/20",
+      "OutDate": "05/6/20",
+      "VendorId": "SV10254",
+      "ProductQty": "30Kg"
+    }
+  ],
+  "userProfile": [
+    {
+      "FirstName": "Srinath",
+      "LastName": "narayan",
+      "Designation": "Manager",
+      "Department": "Warehouse",
+      "DOB": "12/12/1998",
+      "Gender": "Male",
+      "PanId": "WEA123456",
+      "AadharId": "3214 6542 6544",
+      "UserName": "shri",
+      "Id": "MA12587469",
+      "Passward": "Qwerty@123",
+      "MailId": "waremanager@gamil.com",
+      "Phone": "9632587412"
+    },
+    {
+      "FirstName": "Kishore",
+      "LastName": "Kumar",
+      "Designation": "Manager",
+      "Department": "Shop",
+      "DOB": "22/105/1998",
+      "Gender": "Male",
+      "PanId": "JKA253456",
+      "AadharId": "3698 2587 1473",
+      "UserName": "Kish",
+      "Id": "MA1236547892",
+      "Passward": "Chennai@123",
+      "MailId": "shopmanager@gamil.com",
+      "Phone": "9512364785"
+    },
+    {
+      "FirstName": "Latta",
+      "LastName": "Naidu",
+      "Designation": "Suppiler",
+      "Department": "Shop",
+      "DOB": "14/08/1998",
+      "Gender": "FeMale",
+      "PanId": "MJA135789",
+      "AadharId": "3547 2587 1478",
+      "UserName": "latta",
+      "Id": "SP123654789",
+      "Passward": "Zxy@1254",
+      "MailId": "suppiler@gamil.com",
+      "Phone": "9965488745"
+    },
+    {
+      "FirstName": "Summi",
+      "LastName": "shree",
+      "Designation": "Vendor",
+      "Department": "Shop",
+      "DOB": "22/5/1998",
+      "Gender": "FeMale",
+      "PanId": "POA1258256",
+      "AadharId": "2221 5872 3578",
+      "UserName": "Dog",
+      "Id": "VE12528469",
+      "Passward": "Qwerty@123",
+      "MailId": "Vendor@gamil.com",
+      "Phone": "996544123"
+    },
+    {
+      "FirstName": "Priya",
+      "LastName": "shree",
+      "Designation": "CHecker",
+      "Department": "Shop",
+      "DOB": "22/7/1998",
+      "Gender": "FeMale",
+      "PanId": "LOA2588256",
+      "AadharId": "3214 6547 8932",
+      "UserName": "Pri",
+      "Id": "CK12528469",
+      "Passward": "Asdfer@123",
+      "MailId": "ShopChecker@gamil.com",
+      "Phone": "9876543217"
+    },
+    {
+      "FirstName": "Viji",
+      "LastName": "Lakshimi",
+      "Designation": "CHecker",
+      "Department": "Warehouse",
+      "DOB": "28/9/1998",
+      "Gender": "FeMale",
+      "PanId": "OPU2581458",
+      "AadharId": "1598 3578 4586",
+      "UserName": "Viji",
+      "Id": "CK32156987",
+      "Passward": "fghfer@123",
+      "MailId": "WareChecker@gamil.com",
+      "Phone": "996548712"
+    }
+  ],
+  "ApproveStock": [
+    {
+      "id": 1,
+      "ProductType": "Beverages",
+      "ProductName": "Beer",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "10",
+      "Price": "360",
+      "Discount": "20%"
+    },
+    {
+      "id": 2,
+      "ProductType": "Beverages",
+      "ProductName": "Pepsi",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "20",
+      "Price": "300",
+      "Discount": "50%"
+    },
+    {
+      "id": 3,
+      "ProductType": "Beverages",
+      "ProductName": "Coke",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "30",
+      "Price": "250",
+      "Discount": "250%"
+    },
+    {
+      "id": 4,
+      "ProductType": "Dairy",
+      "ProductName": "Bread",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20",
+      "Price": "250",
+      "Discount": "20%"
+    },
+    {
+      "id": 5,
+      "ProductType": "Dairy",
+      "ProductName": "Milk",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25",
+      "Price": "200",
+      "Discount": "10%"
+    },
+    {
+      "id": 6,
+      "ProductType": "Dairy",
+      "ProductName": "Panner",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "30",
+      "Price": "300",
+      "Discount": "20%"
+    },
+    {
+      "id": 7,
+      "ProductType": "Vegetables",
+      "ProductName": "Potato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20kg",
+      "Price": "300",
+      "Discount": "40%"
+    },
+    {
+      "id": 8,
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg",
+      "Price": "250",
+      "Discount": "30%"
+    },
+    {
+      "id": 9,
+      "ProductType": "Vegetables",
+      "ProductName": "Onion",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg",
+      "Price": "230",
+      "Discount": "20%"
+    },
+    {
+      "id": 11,
+      "ProductType": "Fruits",
+      "ProductName": "Kiwi",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "21kg",
+      "Price": "500",
+      "Discount": "15%"
+    },
+    {
+      "id": 12,
+      "ProductType": "Fruits",
+      "ProductName": "Mango",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "30kg",
+      "Price": "800",
+      "Discount": "20%"
+    },
+    {
+      "id": 13,
+      "ProductType": "Fruits",
+      "ProductName": "Orange",
+      "VendorId": "SV10963",
+      "VendorName": "Muthu",
+      "SupplierName": "Shiva",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg",
+      "Price": "600",
+      "Discount": "15%"
+    },
+    {
+      "id": 14,
+      "ProductType": "Foodgrains",
+      "ProductName": "Rice",
+      "VendorId": "SV10159",
+      "VendorName": "Kishore",
+      "SupplierName": "Priya",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "30kg",
+      "Price": "400",
+      "Discount": "20%"
+    },
+    {
+      "id": 15,
+      "ProductType": "Foodgrains",
+      "ProductName": "Wheat",
+      "VendorId": "SV10159",
+      "VendorName": "Kishore",
+      "SupplierName": "Priya",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "35kg",
+      "Price": "800",
+      "Discount": "40%"
+    },
+    {
+      "id": 16,
+      "ProductType": "Baby Products",
+      "ProductName": "Oil",
+      "VendorId": "SV10125",
+      "VendorName": "Shiny",
+      "SupplierName": "Viji",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "25",
+      "Price": "300",
+      "Discount": "30%"
+    },
+    {
+      "id": 16,
+      "ProductType": "Baby Products",
+      "ProductName": "Daiper",
+      "VendorId": "SV10125",
+      "VendorName": "Shiny",
+      "SupplierName": "Viji",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "25",
+      "Price": "200",
+      "Discount": "10%"
+    }
+  ],
+  "DamageStock": [
+    {
+      "id": 1,
+      "ProductType": "Beverages",
+      "ProductName": "Beer",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "10",
+      "Damage": "Yes",
+      "DamageQty": "5"
+    },
+    {
+      "id": 2,
+      "ProductType": "Beverages",
+      "ProductName": "Pepsi",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "20",
+      "Damage": "Yes",
+      "DamageQty": "10"
+    },
+    {
+      "id": 3,
+      "ProductType": "Beverages",
+      "ProductName": "Coke",
+      "VendorId": "SV10287",
+      "VendorName": "Latta",
+      "SupplierName": "Lokesh",
+      "ProductDiscrption": "Non-Perishable",
+      "ProductQty": "30",
+      "Damage": "No",
+      "DamageQty": "0"
+    },
+    {
+      "id": 4,
+      "ProductType": "Dairy",
+      "ProductName": "Bread",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20",
+      "Damage": "Yes",
+      "DamageQty": "15"
+    },
+    {
+      "id": 5,
+      "ProductType": "Dairy",
+      "ProductName": "Milk",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25",
+      "Damage": "No",
+      "DamageQty": "0"
+    },
+    {
+      "id": 6,
+      "ProductType": "Dairy",
+      "ProductName": "Panner",
+      "VendorId": "SV10268",
+      "VendorName": "Ram",
+      "SupplierName": "Sham",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "30",
+      "Damage": "Yes",
+      "DamageQty": "20"
+    },
+    {
+      "id": 7,
+      "ProductType": "Vegetables",
+      "ProductName": "Potato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "20kg",
+      "Damage": "No",
+      "DamageQty": "0"
+    },
+    {
+      "id": 8,
+      "ProductType": "Vegetables",
+      "ProductName": "Tomato",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg",
+      "Damage": "Yes",
+      "DamageQty": "5Kg"
+    },
+    {
+      "id": 9,
+      "ProductType": "Vegetables",
+      "ProductName": "Onion",
+      "VendorId": "SV10963",
+      "VendorName": "Ravi",
+      "SupplierName": "Gopal",
+      "ProductDiscrption": "Perishable",
+      "ProductQty": "25kg",
+      "Damage": "No",
+      "DamageQty": "0"
+    }
+  ]
+}
