@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ShopService {
-  apilink="http://localhost:3000/InShopStock";
+  apilink="http://localhost:3000/InShopStock ";
   constructor(private _http: HttpClient) { }
 
   getgoods(){

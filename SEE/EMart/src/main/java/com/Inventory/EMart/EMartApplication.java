@@ -1,4 +1,4 @@
-package com.Inventory.EMart;
+package com.inventory.emart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,7 @@ public class EMartApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EMartApplication.class, args);
+		System.out.println("======SUCCESS==========>");
 	}
 
 }

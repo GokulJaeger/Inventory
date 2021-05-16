@@ -11,3 +11,11 @@ spring.jpa.properties.hibernate.format_sql=true
 
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type=TRACE
+
+npm install --save @angular/material @angular/cdk
+npm i bootstrap
+npm i jquery
+npm i sweetalert2
+npm i ng2-search-filter
+npm i ng2-order-pipe
+npm i ngx-pagination

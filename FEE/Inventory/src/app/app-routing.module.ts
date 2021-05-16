@@ -5,8 +5,6 @@ import { CheckerDeskComponent } from './component/dashboard/checker-desk/checker
 import { SellerDeskComponent } from './component/dashboard/seller-desk/seller-desk.component';
 import { VendorDeskComponent } from './component/dashboard/vendor-desk/vendor-desk.component';
 import { WarehouseDeskComponent } from './component/dashboard/warehouse-desk/warehouse-desk.component';
-
-
 import { OrderhistoryComponent } from './component/desk/admin-desk-items/orderhistory/orderhistory.component';
 import { PaymentComponent } from './component/desk/admin-desk-items/payment/payment.component';
 import { RequestsupplyComponent } from './component/desk/admin-desk-items/requestsupply/requestsupply.component';
@@ -33,13 +31,15 @@ import { HomeComponent } from './component/home/home.component';
 import { AdminComponent } from './component/login/admin/admin.component';
 import { SellerComponent } from './component/login/seller/seller.component';
 import { WarehouseComponent } from './component/login/warehouse/warehouse.component';
+import { RegisterComponent } from './component/register/register/register.component';
 
 
 
 
 
 const routes: Routes = [  
-  { path: '',component:HomeComponent},
+
+  {path: 'home',component:HomeComponent},
   {path:'admin',component:AdminComponent},
   {path:'vendor',component:SellerComponent},
   {path:'warehouse',component:WarehouseComponent},
@@ -72,6 +72,8 @@ const routes: Routes = [
   {path: 'mware',component:WargoodsComponent},
   {path: 'mshop',component:ShopgoodsComponent},
   {path: 'mreport',component:ReporttoadminComponent},
+  {path: 'skakgiuhkafgsjdfv_admin_skhhfdskjvvx_register_dsfkjgbskg',component:RegisterComponent},
+  {path: '',component:HomeComponent}
   
  
   

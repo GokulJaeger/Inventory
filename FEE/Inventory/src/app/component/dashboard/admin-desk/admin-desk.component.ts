@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from 'src/app/service/admin.service';
 
 @Component({
   selector: 'app-admin-desk',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDeskComponent implements OnInit {
 
-  constructor() { }
+  content?: string;
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
+    this.adminService.getAdminBoard().subscribe(
+      data => {
+        this.content = data;
+      },
+      err => {
+        this.content = JSON.parse(err.error).message;
+      }
+    );
   }
 
 }
