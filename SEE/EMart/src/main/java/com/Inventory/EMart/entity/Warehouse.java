@@ -2,8 +2,10 @@ package com.inventory.emart.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -16,6 +18,7 @@ public class Warehouse {
 
     @Column(name = "ID")
     private long ID;
+
     private String P_id;
     private String P_name;
     private String P_description;
@@ -27,14 +30,19 @@ public class Warehouse {
     @Column(name = "P_Container")
     private String	P_Container;
 
-    @ManyToMany()
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinTable(name = "container_list",
     joinColumns = {@JoinColumn(name = "P_Container", referencedColumnName = "ID")},
     inverseJoinColumns = {@JoinColumn(name = "ID", referencedColumnName = "ID")}, 
             uniqueConstraints = @UniqueConstraint(columnNames = {
                     "P_Container", "role_id" }))
     private List<Containers> Container_List;
+
+
     private String Order_id;
+
+    
+
     public long getID() {
         return ID;
     }
@@ -101,7 +109,6 @@ public class Warehouse {
     public void setOrder_id(String order_id) {
         Order_id = order_id;
     }
-
-    
+  
 
 }
