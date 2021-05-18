@@ -38,6 +38,7 @@ import { ShopgoodsComponent } from './component/desk/ware-desk-items/shopgoods/s
 import { WargoodsComponent } from './component/desk/ware-desk-items/wargoods/wargoods.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
+import { NotificationsComponent } from './component/desk/admin-desk-items/notifications/notifications.component';
 
 
 
@@ -80,6 +81,7 @@ import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.com
     ShopgoodsComponent,
     WargoodsComponent,
     PagenotfoundComponent,
+    NotificationsComponent,
     
   
 

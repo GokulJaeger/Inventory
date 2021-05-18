@@ -1,0 +1,43 @@
+
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a class="menu-item fa fa-home" [routerLink]="['/']"></a>
+        <a class="menu-item fa fa-refresh" (click)="reloadCurrentPage()"></a>
+        <a class="menu-item fa fa-arrow-left" [routerLink]="['/admindesk']"></a>
+        <a class="menu-item fa fa-power-off" [routerLink]="['/admin']"></a>
+    </menu>
+
+</div>
+
+<div class="card1">
+    <h2>Notifiction</h2>
+</div>
+<br>
+<br>
+
+
+<div class="container" *ngIf="a == 1">
+    <div *ngFor="let a of allAlerts;">
+        <div class="card a">
+            <span></span>
+            <div class="content">
+              <h2>{{a.Name}}</h2>
+              <h3>{{a.Department}}</h3>
+              <h4>{{a.Id}}</h4>
+             <h4><p>{{a.Message}}</p></h4> 
+             
+            </div>
+          </div>
+    </div>
+   </div>
+ <div class="liquidbody">
+    <a (click)="summa()">
+        <span>Button</span>
+        <div class="liquid"></div>
+      </a>
+ </div>

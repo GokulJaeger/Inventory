@@ -5,6 +5,7 @@ import { CheckerDeskComponent } from './component/dashboard/checker-desk/checker
 import { SellerDeskComponent } from './component/dashboard/seller-desk/seller-desk.component';
 import { VendorDeskComponent } from './component/dashboard/vendor-desk/vendor-desk.component';
 import { WarehouseDeskComponent } from './component/dashboard/warehouse-desk/warehouse-desk.component';
+import { NotificationsComponent } from './component/desk/admin-desk-items/notifications/notifications.component';
 
 
 import { OrderhistoryComponent } from './component/desk/admin-desk-items/orderhistory/orderhistory.component';
@@ -73,7 +74,7 @@ const routes: Routes = [
   {path: 'mware',component:WargoodsComponent},
   {path: 'mshop',component:ShopgoodsComponent},
   {path: 'mreport',component:ReporttoadminComponent},
-  
+  {path: 'notify',component:NotificationsComponent},
   
   {path: '**',component:PagenotfoundComponent},
   

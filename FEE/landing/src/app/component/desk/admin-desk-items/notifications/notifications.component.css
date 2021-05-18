@@ -1,0 +1,451 @@
+body {
+    background-color: #EDEDED;
+  }
+  .circular-menu {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+  }
+  
+  .circular-menu .floating-btn {
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: hsl(4, 98%, 60%);
+    box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    line-height: 3.9;
+    cursor: pointer;
+    outline: 0;
+  }
+  
+  .circular-menu.active .floating-btn {
+    box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+  }
+  
+  .circular-menu .floating-btn:active {
+    box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+  }
+  
+  .circular-menu .floating-btn i {
+    font-size: 1.3em;
+    transition: transform .2s;  
+  }
+  
+  .circular-menu.active .floating-btn i {
+    transform: rotate(-45deg);
+  }
+  
+  .circular-menu:after {
+    display: block;
+    content: ' ';
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background-color: hsl(4, 98%, 60%);
+    transition: all .3s ease;
+  }
+  
+  .circular-menu.active:after {
+    transform: scale3d(5.5, 5.5, 1);
+    transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+  }
+  
+  .circular-menu .items-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .circular-menu .menu-item {
+    position: absolute;
+    top: .2em;
+    right: .2em;
+    z-index: -1;
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+    background-color: hsla(0,0%,0%,.1);
+    transition: transform .3s ease, background .2s ease;
+  }
+  
+  .circular-menu .menu-item:hover {
+    background-color: hsla(0,0%,0%,.3);
+  }
+  
+  .circular-menu.active .menu-item {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .circular-menu.active .menu-item:nth-child(1) {
+    transform: translate3d(1em,-7em,0);
+  }
+  
+  .circular-menu.active .menu-item:nth-child(2) {
+    transform: translate3d(-3.5em,-6.3em,0);
+  }
+  
+  .circular-menu.active .menu-item:nth-child(3) {
+    transform: translate3d(-6.5em,-3.2em,0);
+  }
+  
+  .circular-menu.active .menu-item:nth-child(4) {
+    transform: translate3d(-7em,1em,0);
+  }
+  
+  /**
+   * The other theme for this menu
+   */
+  
+  .circular-menu.circular-menu-left {
+    right: auto; 
+    left: 1em;
+  }
+  
+  .circular-menu.circular-menu-left .floating-btn {
+    background-color: hsl(217, 89%, 61%);
+  }
+  
+  .circular-menu.circular-menu-left:after {
+    background-color: hsl(217, 89%, 61%);
+  }
+  
+  .circular-menu.circular-menu-left.active .floating-btn i {
+    transform: rotate(90deg);
+  }
+  
+  .circular-menu.circular-menu-left.active .menu-item:nth-child(1) {
+    transform: translate3d(-1em,-7em,0);
+  }
+  
+  .circular-menu.circular-menu-left.active .menu-item:nth-child(2) {
+    transform: translate3d(3.5em,-6.3em,0);
+  }
+  
+  .circular-menu.circular-menu-left.active .menu-item:nth-child(3) {
+    transform: translate3d(6.5em,-3.2em,0);
+  }
+  
+  .circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
+    transform: translate3d(7em,1em,0);
+  }
+  .card1{
+    font-family: fantasy;
+    padding: 10px;
+    margin-top: 20px;
+    color: black;
+    left: 90px;
+    width: 1600px;
+    right: 30px;
+    background-color: #ff6700;
+    font-size: 20px;
+    
+  
+
+
+  }
+  .card-body{
+    font-family: fantasy;
+    padding: 10px;
+    color: black;
+  
+    font-size: 20px;
+   
+  }
+
+  /* animation */
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: #222;
+  }
+  
+  .body {
+   
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.4s;
+    border: none;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50px;
+    transform: skewx(15deg);
+    transition: 0.4s;
+  }
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50px;
+    transform: skewx(15deg);
+    transition: 0.4s;
+    filter: blur(30px);
+  }
+  
+  .card:hover::before,
+  .card:hover::after {
+    transform: skewx(0);
+    left: 20px;
+    width: calc(100% - 80px);
+  }
+  
+  .card:nth-child(1)::before,
+  .card:nth-child(1)::after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+  }
+  
+  .card:nth-child(2)::before,
+  .card:nth-child(2)::after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+  }
+  
+  .card:nth-child(3)::before,
+  .card:nth-child(3)::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+  .card:nth-child(4)::before,
+  .card:nth-child(4)::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+  }
+  
+  .card span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .card span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    
+    opacity: 0;
+    transition: 0.4s;
+  }
+  
+  .card:hover span::before {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    left: 50px;
+    top: -50px;
+    animation: swing 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  
+  .card:hover span::after {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    right: 50px;
+    bottom: -50px;
+    animation: swing 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation-delay: -1s;
+  }
+  
+  .content {
+    z-index: 1;
+    position: relative;
+    left: 0;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 20px 50px;
+    transition: 0.4s;
+    color: black;
+  }
+  
+  .card:hover .content {
+    left: -25px;
+    padding: 40px 50px;
+  }
+  
+  .card h2 {
+    font-size: 1.9em;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 0.95em;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  .card a {
+    display: inline-block;
+    text-decoration: none;
+    background: white;
+    color: #222;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  @keyframes swing {
+    0% {
+      transform: translatey(10px);
+    }
+  
+    50% {
+      transform: translatey(-10px);
+    }
+  
+    100% {
+      transform: translatey(10px);
+    }
+
+  }
+
+  .liquidbody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+  }
+  
+  a {
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+  }
+  
+  a span {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+  }
+  
+ a .liquid {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+  }
+  
+  a .liquid::after,
+  a .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+  }
+  
+  a .liquid::before {
+    
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+  }
+  
+  a .liquid::after {
+    
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+  }
+  
+  a:hover .liquid{
+    top: -120px;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }

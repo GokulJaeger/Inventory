@@ -1007,5 +1007,26 @@
       "Damage": "No",
       "DamageQty": "0"
     }
+  ],
+  
+  "notification": [
+    {
+      "Name": "Gokul",
+      "Id": "SV10287",
+      "Department": "Manager",
+      "Message": "Restock Needed In Shop"
+    },
+    {
+      "Name": "Lokesh",
+      "Id": "SV10231",
+      "Department": "Checker",
+      "Message": "Incoming Stock Verified And Stored"
+    },
+    {
+      "Name": "Lata",
+      "Id": "SV10963",
+      "Department": "Supplier",
+      "Message": "Request Stock Approved"
+    }
   ]
 }
