@@ -1,0 +1,369 @@
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a class="menu-item fa fa-home" [routerLink]="['/']"></a>
+        <a class="menu-item fa fa-refresh" (click)="reloadCurrentPage()"></a>
+        <a class="menu-item fa fa-arrow-left" [routerLink]="['/admindesk']"></a>
+        <a class="menu-item fa fa-power-off" [routerLink]="['/admin']"></a>
+    </menu>
+
+</div>
+
+
+<title>Bank Customer Feedback Form</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+    html,
+    body {
+        min-height: 100%;
+    }
+
+    body,
+    div,
+    form,
+    input,
+    select {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 22px;
+    }
+
+    h1 {
+        color: black;
+        font-family: fantasy;
+        font-size: 60px;
+        padding: 20px;
+
+    }
+
+    h4 {
+        margin: 20px 0 4px;
+        font-weight: 400;
+    }
+
+    span {
+        color: red;
+    }
+
+    .small {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .testbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        padding: 3px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px #ccc;
+    }
+
+    input {
+        width: calc(100% - 10px);
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+        outline: none;
+        border: 1px solid #095484;
+        background: #e6eef7;
+    }
+
+    .title-block select,
+    .title-block input {
+        margin-bottom: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    select {
+        padding: 7px 0;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        background: transparent;
+    }
+
+    select,
+    table {
+        width: 100%;
+    }
+
+    option {
+        background: #fff;
+        padding: 10px;
+    }
+
+    .day-visited,
+    .time-visited {
+        position: relative;
+    }
+
+    input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    input[type="time"]::-webkit-inner-spin-button {
+        margin: 2px 22px 0 0;
+    }
+
+    .day-visited i,
+    .time-visited i,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        top: 8px;
+        font-size: 20px;
+    }
+
+    .day-visited i,
+    .time-visited i {
+        right: 5px;
+        z-index: 1;
+        color: #a9a9a9;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+        right: 0;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .question-answer label {
+        display: block;
+        padding: 0 20px 10px 0;
+    }
+
+    .question-answer input {
+        width: auto;
+        margin-top: -2px;
+    }
+
+    th,
+    td {
+        width: 18%;
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        vertical-align: unset;
+        line-height: 18px;
+        font-weight: 400;
+        word-break: break-all;
+    }
+
+    .first-col {
+        width: 25%;
+        text-align: left;
+    }
+
+    textarea {
+        width: calc(100% - 6px);
+    }
+
+    .btn-block {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    button {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #095484;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0666a3;
+    }
+
+    @media (min-width: 568px) {
+        .title-block {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title-block select {
+            width: 30%;
+            margin-bottom: 0;
+        }
+
+        .title-block input {
+            width: 31%;
+            margin-bottom: 0;
+        }
+
+        th,
+        td {
+            word-break: keep-all;
+        }
+
+        .card {
+            padding: 10px;
+
+        }
+
+        .productType {
+            padding: 10px;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .cardtitle {
+            font-family: fantasy;
+            padding: 10px;
+            color: black;
+            background-color: #ff6700;
+            font-size: 20px;
+            left: 300px;
+
+        }
+
+    }
+</style>
+
+
+<div class="testbox">
+    <form>
+        <div class="cardtitle">
+            <div class="card-body">
+                <h1>Request Products</h1>
+            </div>
+        </div>
+        <br>
+        <div class="From" *ngFor="let obj of dataarray">
+            <div class="card">
+                <div class="card-body">
+                    <select id="cars" class="productType" name="pcat" [(ngModel)]="obj.ProductType"
+                        (change)="selectChangeHandler($event)">
+                        <option value="undefined">Type Of The Product</option>
+                        <option value="Bv">Beverages</option>
+                        <option value="Bp">Baby Products</option>
+                        <option value="Vp">Vegetables</option>
+                        <option value="Fp">Fruits</option>
+                        <option value="Fg">Food Grains</option>
+                        <option value="Cl">Cleaning</option>
+
+                    </select>
+                    <br>
+                    <br>
+                    <select name="cars" class="productType" name="Pname" [(ngModel)]="obj.ProductName">
+                        <option value="undefined"> Select The Product</option>
+                        <option value="sd" *ngIf="v=='Bv'">Soft Drinks</option>
+                        <option value="beer" *ngIf="v=='Bv'">Beers</option>
+                        <option value="fd" *ngIf="v=='Bv'">Flavourd Drinks</option>
+                        <option value="bo" *ngIf="v =='Bp' ">Baby Oil</option>
+                        <option value="bs" *ngIf="v =='Bp' ">Baby Shampoo</option>
+                        <option value="diaper" *ngIf="v =='Bp' ">Baby Diapar</option>
+                        <option value="potato" *ngIf="v=='Vp'">Potatos</option>
+                        <option value="tomato" *ngIf="v=='Vp'">Tomatos</option>
+                        <option value="onion" *ngIf="v=='Vp'">Onions</option>
+                        <option value="apple" *ngIf="v=='Fp'">Apples</option>
+                        <option value="orange" *ngIf="v=='Fp'">Oranges</option>
+                        <option value="grapes" *ngIf="v=='Fp'">Grapes</option>
+                        <option value="rice" *ngIf="v=='Fg'"> Basmati Rice</option>
+                        <option value="wheat" *ngIf="v=='Fg'">Wheat FLour</option>
+                        <option value="rawrice" *ngIf="v=='Fg'"> Raw Rice</option>
+                        <option value="maida" *ngIf="v=='Fg'"> Maida Flour</option>
+                        <option value="floorcleaner" *ngIf="v=='Cl'">Floor Cleaner</option>
+                        <option value="mrclean" *ngIf="v=='Cl'">Dish Cleaner</option>
+                        <option value="detergent" *ngIf="v=='Cl'">Liquid Detergent</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="title-block">
+                        <select id="cars" class="productType" name="Ptype" [(ngModel)]="obj.VendorId"
+                            (change)="getvalue($event)">
+                            <option value="undefined">Vendor ID</option>
+                            <option value="seller1">SV10287</option>
+                            <option value="seller2">SV10232</option>
+                            <option value="seller3">SV10333</option>
+                            <option value="seller4">SV10456</option>
+                            <option value="seller5">SV10536</option>
+                            <option value="seller6">SV10896</option>
+                        </select>
+
+                        <input class="name" type="text" id="name" placeholder="Vendor Name" name="vname"
+                            [(ngModel)]="vn" [(ngModel)]="obj.VendorName" />
+                        <input class="name" type="text" id="name" placeholder="Supplier Name" name="sname"
+                            [(ngModel)]="sn" [(ngModel)]="obj.SupplierName" />
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="card">
+                <div class="card-body">
+
+                    <select id="cars" class="productType" name="pdesc" [(ngModel)]="obj.ProductDiscrption" (change)="selectHandler($event)">
+                        <option value="undefined">Product Description</option>
+                        <option value="peri">Perishable</option>
+                        <option value="nonperi">Non-Perishable</option>
+
+                    </select>
+                    <br>
+                    <br>
+                    <select id="cars" class="productType" name="Qty" [(ngModel)]="obj.ProductQty"
+                        placeholder="ProductQty" >
+                        <option value="undefined">Select your option</option>
+                        <option value="pq1" *ngIf="p =='peri'">10kgs</option>
+                        <option value="pq2" *ngIf="p =='peri'">20kgs</option>
+                        <option value="pq3" *ngIf="p =='peri'">25kgs</option>
+                        <option value="pq4" *ngIf="p =='nonperi'">5</option>
+                        <option value="pq5" *ngIf="p =='nonperi'">10</option>
+                        <option value="pq6" *ngIf="p =='nonperi'">15</option>
+                        <option value="pq7" *ngIf="p =='nonperi'">20</option>
+                        <option value="pq8" *ngIf="p =='nonperi'">25</option>
+                    </select>
+
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+<div class="buttons">
+    <div class="action_btn">
+        <button name="submit" class="action_btn submit" type="submit" value="Save" (click)="Add()">Add</button>
+        <button name="submit" class="action_btn cancel" type="submit" value="Cancel" (click)="submit()">Submit</button>
+    </div>
+</div>

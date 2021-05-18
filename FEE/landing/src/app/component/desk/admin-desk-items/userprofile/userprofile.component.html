@@ -1,0 +1,79 @@
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a class="menu-item fa fa-home" [routerLink]="['/']"></a>
+        <a class="menu-item fa fa-refresh" (click)="reloadCurrentPage()"></a>
+        <a class="menu-item fa fa-arrow-left" [routerLink]="['/admindesk']"></a>
+        <a class="menu-item fa fa-power-off" [routerLink]="['/admin']"></a>
+    </menu>
+
+</div>
+
+
+<div class="card">
+    <h2>User Profile</h2>
+</div>
+<br>
+<br>
+
+
+<table class="table table table-warning table-hover">
+                
+    <thead>
+        <tr>
+			<th><h6>FirstName</h6></th>
+			<th><h6>LastName</h6></th>
+			<th><h6>Designation</h6></th>
+			<th><h6>Department</h6></th>
+            <th><h6>DOB</h6></th>
+			<th><h6>Gender</h6></th>
+			<th><h6>PanId</h6></th>
+			<th><h6>AadharId</h6></th>
+            <th><h6>UserName</h6></th>
+			<th><h6>Id</h6></th>
+			<th><h6>Passward</h6></th>
+			<th><h6>MailId</h6></th>
+            <th><h6>Phone</h6></th>
+		</tr>
+        
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let produt of allusers | paginate: { itemsPerPage: 3, currentPage:p  }">
+			<td>{{produt.FirstName}}</td>
+			<td>{{produt.LastName}}</td>
+                <td>{{produt.Designation}}</td>
+                <td>{{produt.Department}}</td>
+                <td>{{produt.DOB}}</td>
+                <td>{{produt.Gender}}</td>
+                <td>{{produt.PanId}}</td>
+                <td>{{produt.AadharId}}</td>
+                
+			    <td>{{produt.UserName}}</td>
+                <td>{{produt.Id}}</td>
+                <td>{{produt.Passward}}</td>
+                <td>{{produt.MailId}}</td>
+                <td>{{produt.Phone}}</td>
+
+
+       
+      </tr>
+    </tbody>
+  </table>
+  <br>
+<br>
+<div class="pagination">
+    <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+
+    <style>
+        .pagination .ngx-pagination .current {
+            background: #ff6700;
+        }
+    </style>
+</div>
+<br>
+<br>

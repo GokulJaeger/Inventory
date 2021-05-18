@@ -1,0 +1,72 @@
+<!-- circular Menu -->
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a class="menu-item fa fa-home" [routerLink]="['/']"></a>
+        <a class="menu-item fa fa-refresh" (click)="reloadCurrentPage()"></a>
+        <a class="menu-item fa fa-arrow-left" [routerLink]="['/checkerdesk']"></a>
+        <a class="menu-item fa fa-power-off" [routerLink]="['/warehouse']"></a>
+    </menu>
+
+</div>
+
+<div class="card">
+    <h2>Damage Stock Request</h2>
+</div>
+<br>
+<br>
+<div class="container">
+    
+    
+    <table class="container">
+        <thead>
+            <tr>
+                <th><h1>Product Type</h1></th>
+                <th><h1>Product Name</h1></th>
+                <th><h1>Vendor Id</h1></th>
+                <th><h1>Vendor Name</h1></th>
+                <th><h1>Supplier Name</h1></th>
+                <th><h1>Product Discrption</h1></th>
+                <th><h1>Product Qty</h1></th>
+                <th><h1>Damage</h1></th>
+                <th><h1>Damage Qty</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr *ngFor="let produt of alldamageproducts | paginate: { itemsPerPage: 5, currentPage:p  }">
+                <td>{{produt.ProductType}}</td>
+                <td>{{produt.ProductName}}</td>
+                <td>{{produt.VendorId}}</td>
+                <td>{{produt.VendorName}}</td>
+                <td>{{produt.SupplierName}}</td>
+                <td>{{produt.ProductDiscrption}}</td>
+                <td>{{produt.ProductQty}}</td>
+                <td>{{produt.Damage}}</td>
+                <td>{{produt.DamageQty}}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+    <br>
+    <br>
+<div class ="pagination">
+    <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+
+
+    <style>
+        .pagination  .ngx-pagination .current {
+          background: #ff6700;
+        }
+      </style>
+</div>
+    </div>
+
+    <div class="wrap">
+        <button class="button"(click)="opensweet()"> Report</button>
+    </div>
+    

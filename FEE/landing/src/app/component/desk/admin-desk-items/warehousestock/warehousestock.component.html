@@ -1,0 +1,65 @@
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-plus"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a class="menu-item fa fa-home" [routerLink]="['/']"></a>
+        <a class="menu-item fa fa-refresh" (click)="reloadCurrentPage()"></a>
+        <a class="menu-item fa fa-arrow-left" [routerLink]="['/admindesk']"></a>
+        <a class="menu-item fa fa-power-off" [routerLink]="['/admin']"></a>
+    </menu>
+
+</div>
+<br>
+<br>
+<div class="card">
+    <div class="card-body">
+        <h1>Available Stock in WareHouse</h1>
+    </div>
+</div>
+<br>
+<br>
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>OrderId</h1></th>
+			<th><h1>ProductId</h1></th>
+			<th><h1>ProductType</h1></th>
+			<th><h1>ProductName</h1></th>
+			<th><h1>InDate</h1></th>
+            <th><h1>OutDate</h1></th>
+			<th><h1>VendorId</h1></th>
+            <th><h1>ProductQty</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let produt of allwarehouseStocks | paginate: { itemsPerPage: 5, currentPage:p  }">
+			<td>{{produt.OrderId}}</td>
+			<td>{{produt.ProductId}}</td>
+                <td>{{produt.ProductType}}</td>
+                <td>{{produt.ProductName}}</td>
+                <td>{{produt.InDate}}</td>
+                <td>{{produt.OutDate}}</td>
+                <td>{{produt.VendorId}}</td>
+                <td>{{produt.ProductQty}}</td>
+		</tr>
+	
+	</tbody>
+</table>
+
+<br>
+<br>
+<div class="pagination">
+    <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+
+    <style>
+        .pagination .ngx-pagination .current {
+            background: #ff6700;
+        }
+    </style>
+</div>
+<br>
+<br>
+    
