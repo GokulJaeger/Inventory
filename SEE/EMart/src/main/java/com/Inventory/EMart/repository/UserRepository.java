@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<com.inventory.emart.entity.DAOUser, Long> {
     DAOUser findByUsername(String username);
 
-	public List<DAOUser> findAll();
+    public List<DAOUser> findAll();
 }

@@ -20,22 +20,36 @@
 <br>
 <br>
 <div class="container">
-    
-    
+
+
     <table class="container">
         <thead>
             <tr>
-                <th><h1>Product Type</h1></th>
-                <th><h1>Product Name</h1></th>
-                <th><h1>Vendor Id</h1></th>
-                <th><h1>Vendor Name</h1></th>
-                <th><h1>Supplier Name</h1></th>
-                <th><h1>Product Discrption</h1></th>
-                <th><h1>Product Qty</h1></th>
+                <th>
+                    <h1>Product Type</h1>
+                </th>
+                <th>
+                    <h1>Product Name</h1>
+                </th>
+                <th>
+                    <h1>Vendor Id</h1>
+                </th>
+                <th>
+                    <h1>Vendor Name</h1>
+                </th>
+                <th>
+                    <h1>Supplier Name</h1>
+                </th>
+                <th>
+                    <h1>Product Discrption</h1>
+                </th>
+                <th>
+                    <h1>Product Qty</h1>
+                </th>
             </tr>
         </thead>
         <tbody>
-           
+
             <tr *ngFor="let produt of allproducts | paginate: { itemsPerPage: 5, currentPage:p  }">
                 <td>{{produt.ProductType}}</td>
                 <td>{{produt.ProductName}}</td>
@@ -45,19 +59,19 @@
                 <td>{{produt.ProductDiscrption}}</td>
                 <td>{{produt.ProductQty}}</td>
             </tr>
-           
+
         </tbody>
     </table>
     <br>
     <br>
-<div class ="pagination">
-    <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+    <div class="pagination">
+        <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
 
 
-    <style>
-        .pagination  .ngx-pagination .current {
-          background: #ff6700;
-        }
-      </style>
-</div>
+        <style>
+            .pagination .ngx-pagination .current {
+                background: #ff6700;
+            }
+        </style>
     </div>
+</div>

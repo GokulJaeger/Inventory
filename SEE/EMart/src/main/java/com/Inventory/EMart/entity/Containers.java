@@ -8,7 +8,6 @@ import javax.persistence.Table;
 @Table(name = "containers")
 public class Containers {
 
-
     @Column(name = "ID")
     private String id;
 

@@ -4,10 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-public class Supplier{
+public class Supplier {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="ID")
+    @Column(name = "ID")
     private long id;
 
     @Column(name = "s_id")
@@ -88,5 +88,4 @@ public class Supplier{
                 + ", sphone=" + sphone + "]";
     }
 
-    
 }

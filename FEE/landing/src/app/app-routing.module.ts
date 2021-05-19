@@ -7,7 +7,6 @@ import { VendorDeskComponent } from './component/dashboard/vendor-desk/vendor-de
 import { WarehouseDeskComponent } from './component/dashboard/warehouse-desk/warehouse-desk.component';
 import { NotificationsComponent } from './component/desk/admin-desk-items/notifications/notifications.component';
 
-
 import { OrderhistoryComponent } from './component/desk/admin-desk-items/orderhistory/orderhistory.component';
 import { PaymentComponent } from './component/desk/admin-desk-items/payment/payment.component';
 import { RequestsupplyComponent } from './component/desk/admin-desk-items/requestsupply/requestsupply.component';
@@ -37,51 +36,45 @@ import { SellerComponent } from './component/login/seller/seller.component';
 import { WarehouseComponent } from './component/login/warehouse/warehouse.component';
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
 
-
-
-
-
-const routes: Routes = [  
-  { path: '',component:HomeComponent},
-  {path:'admin',component:AdminComponent},
-  {path:'vendor',component:SellerComponent},
-  {path:'warehouse',component:WarehouseComponent},
-  {path: 'back',component:HomeComponent},
-  {path:'admindesk',component:AdminDeskComponent},
-  {path:'vendordesk',component:VendorDeskComponent},
-  {path:'checkerdesk',component:CheckerDeskComponent},
-  {path:'warehousedesk',component:WarehouseDeskComponent},
-  {path: 'sellerdesk',component:SellerDeskComponent},
-  {path: 'request',component:RequestsupplyComponent},
-  {path: 'supply',component:SupplylistComponent},
-  {path: 'shelf',component:ShelfstockComponent},
-  {path: 'user',component:UserprofileComponent},
-  {path: 'warestock',component:WarehousestockComponent},
-  {path: 'oderhistory',component:OrderhistoryComponent},
-  {path: 'usermanagement',component:UsermanagementComponent},
-  {path: 'pay',component:PaymentComponent},
-  {path: 'View',component:ViewRequestComponent},
-  {path: 'Approve',component:ApproveRequestComponent},
-  {path: 'Check',component:CheckdamagestockComponent},
-  {path: 'Approvelist',component:ApprovelistComponent},
-  {path: 'reportsuppiler',component:ReporttosuppilierComponent},
-  {path: 'damagestock',component:DamagestockComponent},
-  {path: 'reportmanager',component:ReporttomanagerComponent},
-  {path: 'shopin',component:ShopinstockComponent},
-  {path: 'warin',component:WareinstockComponent},
-  {path: 'damagechecker',component:CheckerdamageComponent},
-  {path: 'incoming',component:IncomingstockComponent},
-  {path: 'mware',component:WargoodsComponent},
-  {path: 'mshop',component:ShopgoodsComponent},
-  {path: 'mreport',component:ReporttoadminComponent},
-  {path: 'notify',component:NotificationsComponent},
-  
-  {path: '**',component:PagenotfoundComponent},
-  
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'vendor', component: SellerComponent },
+  { path: 'warehouse', component: WarehouseComponent },
+  { path: 'back', component: HomeComponent },
+  { path: 'admindesk', component: AdminDeskComponent },
+  { path: 'vendordesk', component: VendorDeskComponent },
+  { path: 'checkerdesk', component: CheckerDeskComponent },
+  { path: 'warehousedesk', component: WarehouseDeskComponent },
+  { path: 'sellerdesk', component: SellerDeskComponent },
+  { path: 'request', component: RequestsupplyComponent },
+  { path: 'supply', component: SupplylistComponent },
+  { path: 'shelf', component: ShelfstockComponent },
+  { path: 'user', component: UserprofileComponent },
+  { path: 'warestock', component: WarehousestockComponent },
+  { path: 'oderhistory', component: OrderhistoryComponent },
+  { path: 'usermanagement', component: UsermanagementComponent },
+  { path: 'pay', component: PaymentComponent },
+  { path: 'View', component: ViewRequestComponent },
+  { path: 'Approve', component: ApproveRequestComponent },
+  { path: 'Check', component: CheckdamagestockComponent },
+  { path: 'Approvelist', component: ApprovelistComponent },
+  { path: 'reportsuppiler', component: ReporttosuppilierComponent },
+  { path: 'damagestock', component: DamagestockComponent },
+  { path: 'reportmanager', component: ReporttomanagerComponent },
+  { path: 'shopin', component: ShopinstockComponent },
+  { path: 'warin', component: WareinstockComponent },
+  { path: 'damagechecker', component: CheckerdamageComponent },
+  { path: 'incoming', component: IncomingstockComponent },
+  { path: 'mware', component: WargoodsComponent },
+  { path: 'mshop', component: ShopgoodsComponent },
+  { path: 'mreport', component: ReporttoadminComponent },
+  { path: 'notify', component: NotificationsComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

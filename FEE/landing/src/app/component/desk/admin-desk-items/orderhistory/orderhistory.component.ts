@@ -5,26 +5,23 @@ import { RequestService } from 'src/app/service/request.service';
 @Component({
   selector: 'app-orderhistory',
   templateUrl: './orderhistory.component.html',
-  styleUrls: ['./orderhistory.component.css']
+  styleUrls: ['./orderhistory.component.css'],
 })
 export class OrderhistoryComponent implements OnInit {
-allproducts :any = [];
-p:any= [];
-  constructor(private Api:RequestService) { }
-
+  allproducts: any = [];
+  p: any = [];
+  constructor(private Api: RequestService) {}
 
   ngOnInit(): void {
-this.allproduct();
+    this.allproduct();
   }
-allproduct(){
-this.Api.getproducts().subscribe((response)=> {
-  this.allproducts = response;
-})
-}
+  allproduct() {
+    this.Api.getproducts().subscribe((response) => {
+      this.allproducts = response;
+    });
+  }
 
   reloadCurrentPage() {
     window.location.reload();
-   }
-
-
+  }
 }

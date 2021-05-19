@@ -2,16 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DamageService {
-  apiurl="http://localhost:3000/DamageStock";
-  constructor(private _http: HttpClient) { }
+  apiurl = 'http://localhost:3000/DamageStock';
+  constructor(private _http: HttpClient) {}
 
-  getdamageproducts(){
+  getdamageproducts() {
     return this._http.get(this.apiurl);
-    }
-    
-  
-
+  }
 }

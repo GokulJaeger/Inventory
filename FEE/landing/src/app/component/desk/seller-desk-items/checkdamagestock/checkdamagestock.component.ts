@@ -5,36 +5,32 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-checkdamagestock',
   templateUrl: './checkdamagestock.component.html',
-  styleUrls: ['./checkdamagestock.component.css']
+  styleUrls: ['./checkdamagestock.component.css'],
 })
 export class CheckdamagestockComponent implements OnInit {
-
-  alldamageproducts :any = [];
-  p:any=1;
-  constructor(private Api:DamageService) { }
+  alldamageproducts: any = [];
+  p: any = 1;
+  constructor(private Api: DamageService) {}
 
   ngOnInit(): void {
     this.alldamageproduct();
   }
 
-
-  alldamageproduct(){
-    this.Api.getdamageproducts().subscribe((response)=> {
+  alldamageproduct() {
+    this.Api.getdamageproducts().subscribe((response) => {
       this.alldamageproducts = response;
-    })
-    }
+    });
+  }
   reloadCurrentPage() {
     window.location.reload();
-   }
-   opensweet(){
+  }
+  opensweet() {
     Swal.fire({
-        title: 'Success !',
-        text: 'Damage Stock has Been Approved..  ',
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: 'Yes'
-      })
-    
-}
-
+      title: 'Success !',
+      text: 'Damage Stock has Been Approved..  ',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    });
+  }
 }

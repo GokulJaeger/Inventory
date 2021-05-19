@@ -7,73 +7,82 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
-import { retry, catchError, map, switchMap, filter, take } from 'rxjs/operators';
+import {
+  retry,
+  catchError,
+  map,
+  switchMap,
+  filter,
+  take,
+} from 'rxjs/operators';
 import { Rt } from './rt';
 import { AuthService } from './auth.service';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
-
   private isRefreshing = false;
 
-  private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+  private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(
+    null
+  );
 
   constructor(public authService: AuthService) {}
 
-
-
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     if (this.authService.getJwtToken()) {
-      request = this.addToken(request,this.authService.getJwtToken());
+      request = this.addToken(request, this.authService.getJwtToken());
     }
 
-    return next.handle(request).pipe(catchError(error => {
-      console.log("==============1");
-      if (error instanceof HttpErrorResponse && error.status === 401){
-        return this.handle401Error(request,next);
-      } else {
-        return throwError(error);
-      }
-    }));
+    return next.handle(request).pipe(
+      catchError((error) => {
+        console.log('==============1');
+        if (error instanceof HttpErrorResponse && error.status === 401) {
+          return this.handle401Error(request, next);
+        } else {
+          return throwError(error);
+        }
+      })
+    );
   }
 
-
-  private handle401Error(request:HttpRequest<any>,next:HttpHandler){
+  private handle401Error(request: HttpRequest<any>, next: HttpHandler) {
     if (!this.isRefreshing) {
       this.isRefreshing = true;
       this.refreshTokenSubject.next(null);
 
-      return this.authService.refreshToken().pipe (
-        switchMap((token:any) => {
+      return this.authService.refreshToken().pipe(
+        switchMap((token: any) => {
           this.isRefreshing = false;
           this.refreshTokenSubject.next(token.token);
-          return next.handle(this.addToken(request,token.token));
-        }));
+          return next.handle(this.addToken(request, token.token));
+        })
+      );
     } else {
       return this.refreshTokenSubject.pipe(
-        filter(token => token != null),
+        filter((token) => token != null),
         take(1),
-        switchMap(jwt => {
-          return next.handle(this.addToken(request,jwt));
-        }));
+        switchMap((jwt) => {
+          return next.handle(this.addToken(request, jwt));
+        })
+      );
     }
   }
 
-
-  private addToken(request:HttpRequest<any>,token:string) {
+  private addToken(request: HttpRequest<any>, token: string) {
     return request.clone({
-      setHeaders:{
-        'Authorization': `Bearer ${token}`
-      }
+      setHeaders: {
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
-
-
 
   // constructor(private httpc:HttpClient) {}
 
   // intercept(
-  //           request: HttpRequest<unknown>, 
+  //           request: HttpRequest<unknown>,
   //           next: HttpHandler
   //           ): Observable<HttpEvent<unknown>> {
   //   return next.handle(request).pipe(
@@ -92,7 +101,6 @@ export class JwtInterceptor implements HttpInterceptor {
 
   // private doRefreshToken(){
   //   const token = sessionStorage.getItem("token");
-
 
   //   const httpHeaders: HttpHeaders = new HttpHeaders({
   //     'authorization': `Bearer ${token}`,

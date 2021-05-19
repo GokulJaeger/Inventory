@@ -23,39 +23,55 @@
 <br>
 <br>
 <table class="container">
-	<thead>
-		<tr>
-			<th><h1>OrderId</h1></th>
-			<th><h1>ProductId</h1></th>
-			<th><h1>ProductType</h1></th>
-			<th><h1>ProductName</h1></th>
-			<th><h1>InDate</h1></th>
-            <th><h1>OutDate</h1></th>
-			<th><h1>VendorId</h1></th>
-            <th><h1>ProductQty</h1></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr *ngFor="let produt of allwarehouseStocks | paginate: { itemsPerPage: 5, currentPage:p  }">
-			<td>{{produt.OrderId}}</td>
-			<td>{{produt.ProductId}}</td>
-                <td>{{produt.ProductType}}</td>
-                <td>{{produt.ProductName}}</td>
-                <td>{{produt.InDate}}</td>
-                <td>{{produt.OutDate}}</td>
-                <td>{{produt.VendorId}}</td>
-                <td>{{produt.ProductQty}}</td>
-		</tr>
-	
-	</tbody>
+    <thead>
+        <tr>
+            <th>
+                <h1>OrderId</h1>
+            </th>
+            <th>
+                <h1>ProductId</h1>
+            </th>
+            <th>
+                <h1>ProductType</h1>
+            </th>
+            <th>
+                <h1>ProductName</h1>
+            </th>
+            <th>
+                <h1>InDate</h1>
+            </th>
+            <th>
+                <h1>OutDate</h1>
+            </th>
+            <th>
+                <h1>VendorId</h1>
+            </th>
+            <th>
+                <h1>ProductQty</h1>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produt of allwarehouseStocks | paginate: { itemsPerPage: 5, currentPage:p  }">
+            <td>{{produt.OrderId}}</td>
+            <td>{{produt.ProductId}}</td>
+            <td>{{produt.ProductType}}</td>
+            <td>{{produt.ProductName}}</td>
+            <td>{{produt.InDate}}</td>
+            <td>{{produt.OutDate}}</td>
+            <td>{{produt.VendorId}}</td>
+            <td>{{produt.ProductQty}}</td>
+        </tr>
+
+    </tbody>
 </table>
-<div class ="pagination">
+<div class="pagination">
     <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
 
 
     <style>
-        .pagination  .ngx-pagination .current {
-          background: #ff6700;
+        .pagination .ngx-pagination .current {
+            background: #ff6700;
         }
-      </style>
+    </style>
 </div>

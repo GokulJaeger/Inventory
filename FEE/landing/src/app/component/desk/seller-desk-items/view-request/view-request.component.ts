@@ -5,16 +5,16 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-view-request',
   templateUrl: './view-request.component.html',
-  styleUrls: ['./view-request.component.css']
+  styleUrls: ['./view-request.component.css'],
 })
 export class ViewRequestComponent implements OnInit {
-p:any=1;
+  p: any = 1;
   allproducts: any = [];
-  constructor(private Api: RequestService) { }
+  constructor(private Api: RequestService) {}
   allproduct() {
     this.Api.getproducts().subscribe((response) => {
       this.allproducts = response;
-    })
+    });
   }
 
   ngOnInit(): void {
@@ -24,14 +24,13 @@ p:any=1;
   reloadCurrentPage() {
     window.location.reload();
   }
-  opensweet(){
+  opensweet() {
     Swal.fire({
-        title: 'Success !',
-        text: 'Request Has Been Forwarded ',
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: 'Yes'
-      })
-    
-}
+      title: 'Success !',
+      text: 'Request Has Been Forwarded ',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    });
+  }
 }

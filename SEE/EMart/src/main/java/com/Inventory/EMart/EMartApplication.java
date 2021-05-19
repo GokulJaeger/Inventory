@@ -8,10 +8,9 @@ public class EMartApplication {
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(EMartApplication.class);
-    	app.run(args);
+		app.run(args);
 		SpringApplication.run(EMartApplication.class, args);
 		System.out.println("======SUCCESS==========>");
 	}
 
 }
- 

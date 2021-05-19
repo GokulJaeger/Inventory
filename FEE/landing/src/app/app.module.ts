@@ -20,7 +20,7 @@ import { WarehousestockComponent } from './component/desk/admin-desk-items/wareh
 import { ShelfstockComponent } from './component/desk/admin-desk-items/shelfstock/shelfstock.component';
 import { VendorDeskComponent } from './component/dashboard/vendor-desk/vendor-desk.component';
 import { CheckerDeskComponent } from './component/dashboard/checker-desk/checker-desk.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserprofileComponent } from './component/desk/admin-desk-items/userprofile/userprofile.component';
 import { ViewRequestComponent } from './component/desk/seller-desk-items/view-request/view-request.component';
 import { ApproveRequestComponent } from './component/desk/seller-desk-items/approve-request/approve-request.component';
@@ -36,11 +36,11 @@ import { IncomingstockComponent } from './component/desk/checker-desk-items/inco
 import { ReporttoadminComponent } from './component/desk/ware-desk-items/reporttoadmin/reporttoadmin.component';
 import { ShopgoodsComponent } from './component/desk/ware-desk-items/shopgoods/shopgoods.component';
 import { WargoodsComponent } from './component/desk/ware-desk-items/wargoods/wargoods.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
 import { NotificationsComponent } from './component/desk/admin-desk-items/notifications/notifications.component';
-
-
+import { AuthGuardService } from './component/guard/auth.gaurd';
+import { JwtInterceptor } from './component/guard/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -55,11 +55,8 @@ import { NotificationsComponent } from './component/desk/admin-desk-items/notifi
     AdminDeskComponent,
     RequestsupplyComponent,
     OrderhistoryComponent,
-    
     SupplylistComponent,
-  
     PaymentComponent,
-    
     UsermanagementComponent,
     WarehousestockComponent,
     ShelfstockComponent,
@@ -82,10 +79,6 @@ import { NotificationsComponent } from './component/desk/admin-desk-items/notifi
     WargoodsComponent,
     PagenotfoundComponent,
     NotificationsComponent,
-    
-  
-
-    
   ],
   imports: [
     BrowserModule,
@@ -95,10 +88,11 @@ import { NotificationsComponent } from './component/desk/admin-desk-items/notifi
     FormsModule,
     HttpClientModule,
     NgxPaginationModule,
-    
-   
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthGuardService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

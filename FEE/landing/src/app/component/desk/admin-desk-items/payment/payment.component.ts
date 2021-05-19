@@ -4,26 +4,22 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.css']
+  styleUrls: ['./payment.component.css'],
 })
 export class PaymentComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   reloadCurrentPage() {
     window.location.reload();
-   }
-   opensweet(){
+  }
+  opensweet() {
     Swal.fire({
-        title: 'Success !',
-        text: 'Our team Will Revert Back To You!',
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: 'Yes'
-      })
-    
-}
-
+      title: 'Success !',
+      text: 'Our team Will Revert Back To You!',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    });
+  }
 }

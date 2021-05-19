@@ -2,15 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotificatonService {
-  apiurl="http://localhost:3000/notification";
-  constructor(private _http: HttpClient) { }
+  apiurl = 'http://localhost:3000/notification';
+  constructor(private _http: HttpClient) {}
 
-
-  getAlerts(){
+  getAlerts() {
     return this._http.get(this.apiurl);
-    }
-
+  }
 }

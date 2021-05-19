@@ -4,19 +4,17 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-reporttomanager',
   templateUrl: './reporttomanager.component.html',
-  styleUrls: ['./reporttomanager.component.css']
+  styleUrls: ['./reporttomanager.component.css'],
 })
 export class ReporttomanagerComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   reloadCurrentPage() {
     window.location.reload();
-   }
+  }
 
-   thanks(){
-    Swal.fire("Successfully Reported ..")
-   }
+  thanks() {
+    Swal.fire('Successfully Reported ..');
+  }
 }

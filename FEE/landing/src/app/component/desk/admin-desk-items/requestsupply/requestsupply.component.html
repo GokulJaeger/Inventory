@@ -328,7 +328,8 @@
             <div class="card">
                 <div class="card-body">
 
-                    <select id="cars" class="productType" name="pdesc" [(ngModel)]="obj.ProductDiscrption" (change)="selectHandler($event)">
+                    <select id="cars" class="productType" name="pdesc" [(ngModel)]="obj.ProductDiscrption"
+                        (change)="selectHandler($event)">
                         <option value="undefined">Product Description</option>
                         <option value="peri">Perishable</option>
                         <option value="nonperi">Non-Perishable</option>
@@ -337,7 +338,7 @@
                     <br>
                     <br>
                     <select id="cars" class="productType" name="Qty" [(ngModel)]="obj.ProductQty"
-                        placeholder="ProductQty" >
+                        placeholder="ProductQty">
                         <option value="undefined">Select your option</option>
                         <option value="pq1" *ngIf="p =='peri'">10kgs</option>
                         <option value="pq2" *ngIf="p =='peri'">20kgs</option>

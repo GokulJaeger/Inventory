@@ -4,27 +4,22 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-usermanagement',
   templateUrl: './usermanagement.component.html',
-  styleUrls: ['./usermanagement.component.css']
+  styleUrls: ['./usermanagement.component.css'],
 })
 export class UsermanagementComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   reloadCurrentPage() {
     window.location.reload();
-   }
-   opensweet(){
+  }
+  opensweet() {
     Swal.fire({
-        title: 'Success !',
-        text: 'Your data has been inserted',
-        icon: 'success',
-        showCancelButton: true,
-        confirmButtonText: 'Yes'
-      })
-    
+      title: 'Success !',
+      text: 'Your data has been inserted',
+      icon: 'success',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    });
+  }
 }
-
-}
-

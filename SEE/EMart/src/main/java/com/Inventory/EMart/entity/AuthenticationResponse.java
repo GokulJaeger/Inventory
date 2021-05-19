@@ -1,11 +1,12 @@
 package com.inventory.emart.entity;
 
 public class AuthenticationResponse {
-    private String token;
+	private String token;
 
 	private String[] roles;
-	
-	public AuthenticationResponse() {}
+
+	public AuthenticationResponse() {
+	}
 
 	public AuthenticationResponse(String token) {
 		super();

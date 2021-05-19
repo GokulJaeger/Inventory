@@ -5,24 +5,23 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-approvelist',
   templateUrl: './approvelist.component.html',
-  styleUrls: ['./approvelist.component.css']
+  styleUrls: ['./approvelist.component.css'],
 })
 export class ApprovelistComponent implements OnInit {
   Approveproducts: any = [];
-  p:any=1;
-  constructor(private Api: ApproveService) { }
+  p: any = 1;
+  constructor(private Api: ApproveService) {}
   ngOnInit(): void {
     this.Approveproduct();
   }
   reloadCurrentPage() {
     window.location.reload();
-   }
+  }
 
-
-   Approveproduct() {
+  Approveproduct() {
     this.Api.appoveproducts().subscribe((response) => {
       this.Approveproducts = response;
-    })
+    });
   }
 
   approve() {
@@ -33,53 +32,50 @@ export class ApprovelistComponent implements OnInit {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, Apprrove it!'
+      confirmButtonText: 'Yes, Apprrove it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Approved!',
-          'Your Order has been Approved.',
-          'success'
-        )
+        Swal.fire('Approved!', 'Your Order has been Approved.', 'success');
       }
-    })
+    });
   }
 
-  deny(){
+  deny() {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',
-        cancelButton: 'btn btn-danger'
+        cancelButton: 'btn btn-danger',
       },
-      buttonsStyling: false
-    })
-    
-    swalWithBootstrapButtons.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, Deny it!',
-      cancelButtonText: 'No, Approve!',
-      reverseButtons: true
-    }).then((result) => {
-      if (result.isConfirmed) {
-        swalWithBootstrapButtons.fire(
-          'Denied!',
-          'Your Order has been Denied.',
-          'success'
-        )
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        swalWithBootstrapButtons.fire(
-          'Are You Sure',
-          'Your Order  is safe And Yet ToBe Approved :)',
-          'success'
-        )
-      }
-    })
-    
+      buttonsStyling: false,
+    });
+
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, Deny it!',
+        cancelButtonText: 'No, Approve!',
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            'Denied!',
+            'Your Order has been Denied.',
+            'success'
+          );
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Are You Sure',
+            'Your Order  is safe And Yet ToBe Approved :)',
+            'success'
+          );
+        }
+      });
   }
 }

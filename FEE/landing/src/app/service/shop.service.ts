@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ShopService {
-  apilink="http://localhost:3000/InShopStock";
-  constructor(private _http: HttpClient) { }
+  apilink = 'http://localhost:3000/InShopStock';
+  constructor(private _http: HttpClient) {}
 
-  getgoods(){
+  getgoods() {
     return this._http.get(this.apilink);
-    }
+  }
 }

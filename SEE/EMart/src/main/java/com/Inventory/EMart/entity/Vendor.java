@@ -28,7 +28,7 @@ public class Vendor {
     @Column(name = "s_id")
     private String s_id;
 
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name = "s_id")
     private List<Vendor> vendor;
 
@@ -103,7 +103,5 @@ public class Vendor {
         return "Vendor [address=" + address + ", email=" + email + ", id=" + id + ", name=" + name + ", s_id=" + s_id
                 + ", v_id=" + v_id + ", vendor=" + vendor + "]";
     }
-
-    
 
 }

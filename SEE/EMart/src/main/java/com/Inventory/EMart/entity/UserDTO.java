@@ -1,7 +1,7 @@
 package com.inventory.emart.entity;
 
 public class UserDTO {
-    private String username;
+	private String username;
 	private String password;
 	private String[] role;
 

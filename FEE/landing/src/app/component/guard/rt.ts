@@ -1,4 +1,4 @@
 export class Rt {
-    public token:string ="";
-    public roles:string ="";
+  public token: string = '';
+  public roles: string = '';
 }

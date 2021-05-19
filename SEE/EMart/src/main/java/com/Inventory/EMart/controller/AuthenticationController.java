@@ -25,13 +25,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import io.jsonwebtoken.impl.DefaultClaims;
 
-
-
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 // @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class AuthenticationController {
-    @Autowired
+	@Autowired
 	private AuthenticationManager authenticationManager;
 
 	@Autowired
@@ -40,56 +38,55 @@ public class AuthenticationController {
 	@Autowired
 	private JwtUtil jwtUtil;
 
-	//@CrossOrigin(origins = "http://localhost:4200")
+	// @CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest)
 			throws Exception {
 		System.out.println("=========0");
-		
+
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
 					authenticationRequest.getUsername(), authenticationRequest.getPassword()));
 			System.out.println("=========00");
 		} catch (DisabledException e) {
 			throw new Exception("USER_DISABLED", e);
-		}
-		catch (BadCredentialsException e) {
+		} catch (BadCredentialsException e) {
 			throw new Exception("INVALID_CREDENTIALS", e);
 		}
 		System.out.println("=========1");
 		UserDetails userdetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
 		System.out.println("=========2");
-		
+
 		String token = jwtUtil.generateToken(userdetails);
 		System.out.println("=========3");
-		  
+
 		AuthenticationResponse auth = new AuthenticationResponse();
 		auth.setToken(token);
-		
+
 		System.out.println("roles..." + userdetails.getAuthorities().toArray()[0].toString());
-		
+
 		String[] rle = new String[userdetails.getAuthorities().toArray().length];
-		for(int i=0;i<userdetails.getAuthorities().toArray().length;i++) {
-			rle[i] =  userdetails.getAuthorities().toArray()[i].toString();
+		for (int i = 0; i < userdetails.getAuthorities().toArray().length; i++) {
+			rle[i] = userdetails.getAuthorities().toArray()[i].toString();
 		}
-		
+
 		auth.setRoles(rle);
 
 		return ResponseEntity.ok(auth);
 	}
-	
+
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
 		return ResponseEntity.ok(userDetailsService.save(user));
 	}
-	
+
 	@RequestMapping(value = "/refreshtoken", method = RequestMethod.POST)
 	public ResponseEntity<?> refreshtoken(HttpServletRequest request) throws Exception {
 		System.out.println("==============RefreshToken===");
 		// From the HttpRequest get the claims
 		DefaultClaims claims = (io.jsonwebtoken.impl.DefaultClaims) request.getAttribute("claims");
-		//System.out.println("==token==" + request.getAttribute("authorization"));
-		//getClaimsFromJWT
+		// System.out.println("==token==" + request.getAttribute("authorization"));
+		// getClaimsFromJWT
 		System.out.println("====================Claims in RT is.." + request.getAttribute("claims"));
 		Map<String, Object> expectedMap = getMapFromIoJsonwebtokenClaims(claims);
 		String token = jwtUtil.doGenerateRefreshToken(expectedMap, expectedMap.get("sub").toString());
@@ -106,7 +103,7 @@ public class AuthenticationController {
 
 	// @RequestMapping(value = "/get", method = RequestMethod.GET)
 	// public ResponseEntity<?> refreshtoken() throws Exception {
-		
-	// 	return new ResponseEntity<>(userDetailsService.findAllUser(),HttpStatus.OK);
+
+	// return new ResponseEntity<>(userDetailsService.findAllUser(),HttpStatus.OK);
 	// }
 }

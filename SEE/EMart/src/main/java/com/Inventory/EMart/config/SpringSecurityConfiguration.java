@@ -1,6 +1,5 @@
 package com.inventory.emart.config;
 
-
 import com.inventory.emart.service.implementations.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
-    @Autowired
+	@Autowired
 	private CustomUserDetailsService userDetailsService;
 
 	@Autowired
@@ -33,6 +32,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
 	/**
 	 * DB, LDAP (Lightweight database access protocol)
 	 */
@@ -49,14 +49,10 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests()
-				.antMatchers("/api/").hasRole("ADMIN")
-				.antMatchers("/api/user").hasAnyRole("USER", "ADMIN")
-				.antMatchers("/authenticate", "/register").permitAll()
-				.anyRequest().authenticated().and()
-				.exceptionHandling()
-				.authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+		http.csrf().disable().authorizeRequests().antMatchers("/api/").hasRole("ADMIN").antMatchers("/api/user")
+				.hasAnyRole("USER", "ADMIN").antMatchers("/authenticate", "/register").permitAll().anyRequest()
+				.authenticated().and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()
+				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.addFilterBefore(customJwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 
